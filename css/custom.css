@@ -1,0 +1,48 @@
+body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #008080;
+}
+
+footer {
+  display: block;
+  width: 100vw;
+  height: 28px;
+
+  position: absolute;
+  bottom: 0;
+
+  background: url('../img/footer-texture.png');
+  background-repeat: repeat-x;
+}
+
+button.btn-start {
+  background-image: url('../img/btn-start.png');
+  width: 54px;
+  height: 22px;
+
+  border: none;
+  outline: none;
+
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+}
+button.btn-start:active {
+  background-image: url('../img/btn-start-active.png');
+}
+
+.toolbar {
+  background-image: url('../img/toolbar.png');
+  width: 102px;
+  height: 22px;
+
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}
+.time {
+  font-size: 5px;
+}
