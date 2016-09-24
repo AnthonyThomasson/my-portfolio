@@ -4,8 +4,97 @@ body {
   height: 100vh;
 
   background-color: #008080;
+
+  overflow: hidden;
 }
 
+/* DESKTOP ICONS ***************************************/
+.desktop-items {
+  display: inline-block;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: white;
+}
+.desktop-items li {
+  width: 71px;
+}
+.desktop-items img {
+  display: block;
+  margin: 0 auto;
+}
+.desktop-items p {
+  text-align: center;;
+}
+/*******************************************************/
+
+/* START MENU ******************************************/
+.start-menu {
+  display: none;
+  background-image: url('../img/start-icons/start-menu.png');
+  width: 212px;
+  height: 342px;
+
+  position: absolute;
+  bottom: -350px;
+
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.start-menu li {
+  background-color: none;
+  margin-left: 23px;
+  min-height: 32px;
+}
+.start-menu li:first-child {
+  margin-top: 3px;
+}
+.start-menu li:hover {
+  background-color: #020B79;
+}
+.line-break, .line-break:hover {
+  margin: 3px 5px 3px 30px !important;
+  padding: 0;
+
+  background-image: url('../img/start-icons/line-break.png');
+  background-repeat: repeat-x;
+  min-height: 2px !important;
+}
+.start-menu li a {
+  display: flex;
+  width: 100%;
+  min-height: 32px;
+
+  text-decoration: none;
+  font-size: 12px;
+  color: #000000;
+
+  margin: 0px;
+  padding-top: 5px;
+
+}
+.start-menu li a:hover {
+  color: #FFFFFF;
+}
+.start-menu img {
+  float: left;
+  margin-right: 10px;
+  margin-left: 8px;
+  max-height: 22px;
+}
+.start-menu p {
+  margin: 3px 0 0 0;
+}
+.start-menu span {
+  float:right;
+}
+/*******************************************************/
+
+/* FOOTER **********************************************/
 footer {
   display: block;
   width: 100vw;
@@ -13,13 +102,13 @@ footer {
 
   position: absolute;
   bottom: 0;
+  z-index: 1;
 
   background: url('../img/footer-texture.png');
   background-repeat: repeat-x;
 }
 
-button.btn-start {
-  background-image: url('../img/btn-start.png');
+button.start-btn, button.start-btn-active{
   width: 54px;
   height: 22px;
 
@@ -30,8 +119,14 @@ button.btn-start {
   left: 2px;
   bottom: 2px;
 }
-button.btn-start:active {
-  background-image: url('../img/btn-start-active.png');
+button.start-btn {
+  background-image: url('../img/start-btn.png');
+}
+button.start-btn:active {
+  background-image: url('../img/start-btn-active.png');
+}
+button.start-btn.active {
+  background-image: url('../img/start-btn-active.png');
 }
 
 .toolbar {
@@ -43,6 +138,126 @@ button.btn-start:active {
   right: 2px;
   bottom: 2px;
 }
+
 .time {
-  font-size: 5px;
+
+  font-size: 12px;
+
+  margin: 0;
+
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+}
+/*******************************************************/
+
+/* DIALOG - GENERAL **************************************/
+.ui-dialog {
+  padding: 0;
+  border-radius: 0;
+  overflow: visible;
+
+  border-left: 3px solid #BFBFBF;
+  border-top: 3px solid #BFBFBF;
+  border-bottom: 3px solid #BFBFBF;
+  border-right: 3px solid #BFBFBF;
+}
+.ui-dialog-titlebar {
+  border-radius: 0;
+  padding: 2px !important;
+  background: none;
+  background-color: #00007F;
+  color: white;
+  font-weight: normal;
+  line-height: 1;
+}
+.ui-dialog,.ui-widget-content, .ui-dialog-content {
+  background: #BFBFBF;
+  margin: 0 !important;
+}
+.ui-dialog .ui-button {
+  background-image: url("../img/dialog-assets/exit-icon.png");
+  background-size: 20px 18px;
+  width: 20px;
+  height: 18px;
+  top: 12px;
+  right: 2px;
+
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+.ui-dialog .ui-button:active {
+  background-image: url("../img/dialog-assets/exit-icon-active.png");
+}
+.ui-dialog .ui-icon {
+  display: none;
+}
+.ui-dialog-content {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+/*******************************************************/
+
+/* DIALOG - ERROR **************************************/
+
+.error-dialog img {
+  display: block;
+  float: left;
+  margin: 13px 20px;
+}
+.error-dialog p {
+  display: inline;
+  position: relative;
+  top: 17px;
+  margin: 0;
+}
+.error-dialog .row:first-of-type {
+  margin-bottom: 10px;
+}
+.dialog-btn {
+  display: block;
+
+  background-image: url("../img/dialog-assets/dialog-btn.png");
+  width:99px;
+  height: 27px;
+
+  margin: 0 auto;
+
+  outline: none;
+  border: none;
+}
+.dialog-btn:active {
+  background-image: url("../img/dialog-assets/dialog-btn-active.png");
+}
+/*******************************************************/
+
+/* DIALOG - MY COMPUTER **************************************/
+.my-computer-dialog {
+  padding: 0 !important;
+  background: white !important;
+}
+.my-computer-top {
+  background: url("../img/dialog-assets/my-computer-top-texture.png");
+  background-repeat: repeat-x;
+  border-bottom: 3px solid #F3F3F3;
+}
+.my-computer-top img.top-left{ }
+.my-computer-top img.top-right{ float: right; }
+
+.my-computer-content {
+  height: 100%;
+  background: white;
+
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #BFBFBF;
+  border-right: 1px solid #BFBFBF;
+}
+.my-computer-content .content-left {
+  float: left;
+}
+.my-computer-content .content-right {
+  padding:10px;
 }
